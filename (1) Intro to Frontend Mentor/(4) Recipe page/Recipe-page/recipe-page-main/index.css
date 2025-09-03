@@ -1,0 +1,167 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Outfit, sans-serif;
+    color: var(--stone-600);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+header{
+    width: 100%;
+    height: 25vh;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 1em;
+    padding: 0em 2em 1em 2em;
+}
+
+.preparation-time {
+    gap: 1em;
+    background: var(--rose-50);
+    color: var(--brown-800);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.preparation-time h3{
+    color: var(--rose-800);
+    align-self: flex-start;
+}
+
+.preparation-time li {
+    color: var(--brown-800);
+}
+
+.nutrition {
+    gap: 1em;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    font-family: Outfit, sans-serif;
+}
+
+th, td {
+    padding: 1em 0 1em 2em;
+}
+
+tr:not(:last-child) > th, tr:not(:last-child) > td {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+td {
+    font-weight: 700;
+    color: var(--brown-800);
+}
+
+h1, h2{
+    font-family: Young Serif, serif;
+    font-weight: 400;
+}
+
+h1 {
+    color: var(--stone-900);
+    font-size: 30px;
+}
+
+h2 {
+    align-self: flex-start;
+    color: var(--brown-800);
+    font-size: 25px;
+}
+
+ul, ol{
+    padding-left: 1em;
+}
+
+li {
+    margin-top: 0.5em;
+    padding-left: 1em;
+}
+
+span {
+    font-weight: 700;
+}
+
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider{
+    border-bottom: 1px solid var(--stone-150);
+}
+
+.attribution{
+    margin: auto;
+    align-self: center;
+}
+
+@media screen and (min-width: 701px) {
+    body{
+        background: var(--stone-100);
+    }
+
+    .content {
+        width: 700px;
+        min-height: 100vh;
+        background: var(--white);
+        border-radius: 25px;
+        margin: 5em;
+    }
+
+    header {
+        width: 100%;
+        height: 100%;
+        padding: 2em;
+    }
+
+    img {
+        border-radius: 15px;
+    }
+
+    .preparation-time, .ingredients {
+        align-items: flex-start!important;
+        padding-left: 1em;
+    }
+
+    ul, ol {
+        padding-left: 1em;
+    }
+}
