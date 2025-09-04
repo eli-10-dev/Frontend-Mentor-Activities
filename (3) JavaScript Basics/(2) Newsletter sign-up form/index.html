@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer async src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+  <div class="content">
+    
+    <header id="header">
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="Sign up illustration" class="hidden" id="header-image-mobile">
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="Sign up illustration" class="hidden" id="header-image-desktop">
+    </header>
+
+    <main>
+      <h1>Stay updated!</h1>
+
+      <div>Join 60,000+ product managers receiving monthly updates on:</div>
+
+      <section style="display:flex;">
+        <img src="assets/images/icon-list.svg" class="list-icon">
+        <div>Product discovery and building what matters</div>
+      </section>
+
+
+      <section style="display:flex;">
+        <img src="assets/images/icon-list.svg" class="list-icon">
+        <div>Measuring to ensure updates are a success</div>
+      </section>
+
+      <section style="display:flex;">
+        <img src="assets/images/icon-list.svg" class="list-icon">
+        <div>And much more!</div>
+      </section>
+
+        <form>
+          <label class="label-email" for="email">Email address</label>
+          <input class="input-email" id="email" name="email" placeholder="email@company.com"/>
+          <div class="subscribe-button">Subscribe to monthly newsletter</div>
+        </form>
+        <!-- Sign-up form end -->
+    </main>
+
+    <div class="success-message hidden">
+      Thanks for subscribing!
+
+      A confirmation email has been sent to ash@loremcompany.com. 
+      Please open it and click the button inside to confirm your subscription.
+
+      <div class="dismiss-button">Dismiss message</div>
+    </div>
+  </div>
+      <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/eli-10-dev">Elijah Gaylan</a>.
+    </footer>
+</body>
+</html>

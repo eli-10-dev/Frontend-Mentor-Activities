@@ -1,0 +1,157 @@
+:root{
+    --red: hsl(4, 100%, 67%);
+    --blue700: hsl(235, 18%, 26%);
+    --blue800: hsl(234, 29%, 20%);
+    --grey: hsl(0, 0%,58%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+body{
+    /* border: 3px solid black; */
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--white);
+}
+
+.content{
+    /* border: 3px solid red; */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+}
+
+header{
+    width: 100%;
+}
+
+header img{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    /* border: 3px solid black; */
+    width: 100%;
+    background: var(--white);
+    padding: 1em;
+}
+
+main > *:not(h1){
+    margin-top: 1em;
+}
+
+h1{
+    font-size: 32px;
+}
+
+.list-icon{
+    margin-right: 1em;
+}
+
+form{
+    padding-top: 1em;
+    width: 100%;
+}
+
+.label-email{
+    font-size: 12px;
+}
+
+.input-email{
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    width: 100%;
+    height: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 1.5em;
+}
+
+.input-email::placeholder{
+    color: var(--grey);
+}
+
+.subscribe-button{
+    border-radius: 10px;
+    width: 100%;
+    height: 2em;
+    background: var(--blue800);
+    margin-top: 1em;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.h1, .label-email, .subscribe-button{
+    font-weight: 700;
+}
+
+.attribution{
+    align-self: center;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+@media screen and (min-width: 750px){
+    body{
+        background: var(--blue700);
+        justify-content: center;
+    }
+
+    .content{
+        /* border: 3px solid black; */
+        width: 60%;
+        max-width: 50em;
+        height: 30em;
+        flex-flow: row-reverse;
+    }
+    
+    header{
+        /* border: 3px solid black; */
+        width: 70%;
+        height: 100%;
+        padding: 1em;
+    }
+
+    header img{
+        border-radius: 10px;
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        
+    }
+
+    main{
+        padding: 2em;
+    }
+
+    footer{
+        color: white;  
+    }
+}
