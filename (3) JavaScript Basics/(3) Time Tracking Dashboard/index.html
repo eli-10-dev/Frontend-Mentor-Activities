@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <script defer async src="script.js"></script>
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+  <div class="content-body">
+
+    <!-- Column -->
+    <div class="user panel">
+
+      <!-- Row -->
+      <section class="user-information"> 
+
+        <img class="profile-picture" src="images/image-jeremy.png" alt="Profile-picture">
+        <section>
+          <div>Report for</div>
+          <div>Jeremy Robson</div>
+        </section>
+
+      </section>
+
+      <!-- Row -->
+      <section class="timespan-filter">
+        <div>Daily</div>
+        <div>Weekly</div>
+        <div>Monthly</div>
+      </section>
+    </div>
+
+    <!-- Column -->
+    <div class="work panel">
+
+      <section class="panel-content">
+        <!-- Row -->
+        <section class="panel-indicator">
+          <h1>Work</h1>
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="ellipsis">
+        </section>
+        
+        <!-- Row -->
+        <section>
+          <section class="time-display daily">
+            <div>5hrs</div>
+            <div>Previous - 7hrs</div>
+          </section>
+
+          <section class="time-display weekly hidden">
+            <div>32hrs</div>  
+            <div>Previous - 36hrs</div>
+          </section>
+
+          <section class="time-display monthly hidden">
+            <div>103hrs</div>
+            <div>Previous - 128hrs</div>
+          </section>   
+        </section>
+      </section>
+    </div>  <!--End of <div class="work panel"></div>   -->
+    
+    <div class="play panel">
+
+      <section class="panel-content">
+        <section class="panel-indicator">
+          <h1>Play</h1>
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="ellipsis">
+        </section>
+
+        <section>
+          <section class="time-display daily">
+            <div>1hr</div> 
+            <div>Previous - 2hrs</div>
+          </section>
+
+          <section class="time-display weekly hidden">
+            <div>10hrs</div>
+            <div>Previous - 8hrs</div>
+          </section>
+
+          <section class="time-display monthly hidden">
+            <div>23hrs</div>
+            <div>Previous - 29hrs</div>
+          </section>
+        </section>
+      </section>
+    </div>
+
+    <div class="study panel">
+
+      <section class="panel-content">
+        <section class="panel-indicator">
+          <h1>Study</h1>
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="ellipsis">
+        </section>
+
+        <section>
+          <section class="time-display daily">
+            <div>0hrs</div>
+            <div>Previous - 1hr</div>
+          </section>
+
+          <section class="time-display weekly hidden">
+            <div>4hrs</div>
+            <div>Previous - 7hrs</div>
+          </section>
+
+          <section class="time-display monthly hidden">
+            <div>13hrs</div>
+            <div>Previous - 19hrs</div>
+          </section>
+        </section>
+      </section>
+    </div>
+
+    <div class="exercise panel">
+
+      <section class="panel-content">
+        <section class="panel-indicator">
+          <h1>Exercise</h1>
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="ellipsis">
+        </section>
+
+        <section>
+          <section class="time-display daily">
+            <div>1hr</div>
+            <div>Previous - 1hr</div>
+          </section>
+
+          <section class="time-display weekly hidden">
+            <div>4hrs</div>
+            <div>Previous - 5hrs</div>
+          </section>
+
+          <section class="time-display monthly hidden">
+            <div>11hrs</div>
+            <div>Previous - 18hrs</div>
+          </section>
+        </section>
+      </section>
+    </div>
+
+    <div class="social panel">
+
+      <section class="panel-content">
+        <section class="panel-indicator">
+          <h1>Social</h1>
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="ellipsis">
+        </section>
+
+        <section>
+          <section class="time-display daily">
+            <div>1hr</div>
+            <div>Previous - 3hrs</div>
+          </section>
+
+          <section class="time-display weekly hidden">
+            <div>5hrs</div>
+            <div>Previous - 10hrs</div>
+          </section>
+
+          <section class="time-display monthly hidden">
+            <div>21hrs</div>
+            <div>Previous - 23hrs</div>
+          </section>
+        </section>
+      </section>      
+    </div>
+
+    <div class="selfcare panel">
+
+      <section class="panel-content">
+        <section class="panel-indicator">
+          <h1>Self Care</h1>
+          <img class="ellipsis" src="images/icon-ellipsis.svg" alt="ellipsis">
+        </section>
+
+        <section>
+          <section class="time-display daily">
+            <div>0hrs</div>
+            <div>Previous - 1hr</div>
+          </section>
+
+          <section class="time-display weekly hidden">
+            <div>2hrs</div>
+            <div>Previous - 2hrs</div>
+          </section>
+
+          <section class="time-display monthly hidden">
+            <div>7hrs</div>
+            <div>Previous - 11hrs</div>
+          </section>
+        </section>
+      </section>
+    </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
