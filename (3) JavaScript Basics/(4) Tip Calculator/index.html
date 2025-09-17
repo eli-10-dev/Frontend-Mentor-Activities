@@ -21,9 +21,9 @@
       <section class="calculator-container">
         <div class="input_bill-wrapper" style="margin-bottom: 1em">
 
-          <label for="bill">Bill</label>
+          <label for="bill-input">Bill</label>
           <div class="input-wrapper">
-            <input name="bill" />
+            <input id="bill-input"/>
             <img src="images/icon-dollar.svg" alt="Dollar sign" class="dollar-sign">
           </div>
 
@@ -33,20 +33,20 @@
           <div style="margin-bottom: 0.5em;">Select Tip %</div>
 
           <section class="tip-select">
-            <div class="tip-option five-percent">5%</div>
-            <div class="tip-option ten-percent">10%</div>
-            <div class="tip-option fifteen-percent">15%</div>
-            <div class="tip-option twentyfive-percent">25%</div>
-            <div class="tip-option fifty-percent">50%</div>
-            <input class="tip-custom" placeholder="Custom"/>
+            <div class="tip-option five-percent" data-value="0.05">5%</div>
+            <div class="tip-option ten-percent" data-value="0.1">10%</div>
+            <div class="tip-option fifteen-percent" data-value="0.15">15%</div>
+            <div class="tip-option twentyfive-percent"  data-value="0.25">25%</div>
+            <div class="tip-option fifty-percent" data-value="0.5">50%</div>
+            <input class="tip-option tip-custom" placeholder="Custom"/>
           </section>
         </section>
 
         <div class="input_people-wrapper">
 
-          <label for="number-of-people">Number of People</label>
+          <label for="people-count-input">Number of People</label>
           <div class="input-wrapper">
-            <input name="number-of-people" />
+            <input id="people-count-input" />
             <img src="images/icon-person.svg" alt="Person icon">
           </div>
 
@@ -60,19 +60,19 @@
             <div>/ person</div>
           </div>
 
-          <div>0.00</div>
+          <div id="tip-share"></div>
         </section>
 
         <section class="receipt-content">
           <div>
-            <div>Tip Amount</div>
+            <div>Total</div>
             <div>/ person</div>
           </div>
 
-          <div>0.00</div>
+          <div id="total-share"></div>
         </section>
 
-        <button class="reset-button">Reset</button>
+        <button class="reset-button" id="reset-button">Reset</button>
       </section>
     </main>
 

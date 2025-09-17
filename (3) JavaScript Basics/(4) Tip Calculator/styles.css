@@ -16,14 +16,13 @@
 }
 
 body{
-    border: 3px solid black;
+    background: rgb(189, 188, 188);
     width: 100%;
     min-height: 100vh;
     font-size: 24px;
 }
 
 .content-container{
-    background: rgb(189, 188, 188);
     width: 100%;
 }
 
@@ -124,7 +123,7 @@ input:not(.tip-custom){
     grid-row: 3 / 4;
 }
 
-.tip-option:active{
+.tip-option:not(.tip-custom):active{
     background: rgb(59, 58, 58);
     color: white;
 }
@@ -132,6 +131,11 @@ input:not(.tip-custom){
 .tip-custom:focus{
     border: 3px solid rgb(171, 158, 158)!important;
     padding: 0;
+}
+
+.active-tip{
+    background: rgb(59, 58, 58);
+    color: white;
 }
 
 /* Tip Amount and Cut per person display */
@@ -183,13 +187,39 @@ footer{
 
     .content-container{
         width: 80%;
-        height: 70%;
+        max-width: 50em;
     }
 
     main{
-        border: 3px solid black;
+        /* border: 3px solid black; */
         display: flex;
         gap: 1em;
+    }
+
+    /* DISPLAY: GRID */
+    .tip-select{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .fifteen-percent{
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+    }
+
+    .twentyfive-percent{
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    .fifty-percent{
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+    }
+
+    .tip-custom{
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
     }
 
     .calculator-container{
