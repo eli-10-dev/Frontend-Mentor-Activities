@@ -138,6 +138,11 @@ input:not(.tip-custom){
     color: white;
 }
 
+.active-custom-tip{
+    background: white;
+    color: black;
+}
+
 /* Tip Amount and Cut per person display */
 
 .receipt-container{

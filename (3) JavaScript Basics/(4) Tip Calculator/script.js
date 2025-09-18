@@ -5,7 +5,7 @@ const peopleCountContainer = document.getElementById('people-count-input');
 
 // Tip Option buttons
 const tipOptions = document.querySelectorAll('.tip-option');
-// console.log(tipOptions);
+const tipCustom = document.getElementById('tip-custom');
 
 // Receipt Display
 const tipShare = document.getElementById('tip-share');
@@ -22,6 +22,7 @@ resetButton.addEventListener("click", () => {
     totalShare.innerHTML = "";
 });
 
+// For styling of active tip options
 const tipHandleClick = (e) => {
     // Instead of looping through all of the buttons, look for the active button
     // tipOptions.forEach(tip => {
@@ -38,7 +39,10 @@ const tipHandleClick = (e) => {
     } 
 
     if (e.target.classList.contains('tip-custom')){
-        return;
+        // Added class to overwrite the active-tip's styles
+        e.target.classList.add('active-custom-tip');
+    } else {
+        tipCustom.value = "";
     }
 
     e.target.classList.add('active-tip');
@@ -50,20 +54,29 @@ tipOptions.forEach(button => {
 });
 
 const calculateShares = () => {
+    // Don't forget to convert the values inside of input fields to numbers
     const totalBill = Number(billContainer.value);
     const selectedTip = document.querySelector('.active-tip');
     const numberOfPeople = Number(peopleCountContainer.value);
 
+    let confirmedTip = '';
     if (totalBill && selectedTip && numberOfPeople){
-        const tip = totalBill * selectedTip.dataset.value;
+        if (selectedTip.classList.contains('tip-custom')){
+            confirmedTip = selectedTip.value / 100;
+        } else {
+            confirmedTip = selectedTip.dataset.value
+        }
+
+        const tip = totalBill * confirmedTip;
         const tipShare = tip / numberOfPeople;
         const billShare = (totalBill + tip)/ numberOfPeople;
         console.log(`totalBill: ${totalBill} * \nselectedTip: ${selectedTip.dataset.value} \n= tip: ${tip}`);
         console.log(`tip: ${tip} / \nno. of people" ${numberOfPeople} \n= tipShare: ${tipShare}`);
         console.log(`bill: ${totalBill}\n / numberofPeople ${numberOfPeople} \n = billShare: ${billShare}`);
         displayTipAndBill(tipShare, billShare);
-    }
+    };
 };
+
 
 const displayTipAndBill = (tip, bill) => {
         tipShare.innerHTML = `$${tip.toFixed(2)}`;
@@ -72,4 +85,11 @@ const displayTipAndBill = (tip, bill) => {
 
 [billContainer, peopleCountContainer].forEach(element => {
     element.addEventListener('input', calculateShares);
+});
+
+// Added an input event listener for the custom tip
+tipCustom.addEventListener('input', () => {
+    if (tipCustom.classList.contains('active-tip')){
+        calculateShares();
+    }
 });
