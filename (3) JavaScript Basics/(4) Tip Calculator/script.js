@@ -88,6 +88,10 @@ const calculateShares = () => {
     }
 };
 
+/*
+Note to self: When running low on brain juice, take a break instead of forcing to finish the code
+and ask for heavy AI assistance. Check previous version of displayError, written by a tired self.
+*/
 const displayError = (input) => {
     const numInput = Number(input.value);
 

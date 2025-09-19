@@ -42,7 +42,7 @@ main{
 /* General Styles */
 /* NOTE TO SELF: REMOVE THE OUTLINE OF INPUTS IN CSS TO REMOVE THE OUTER LAYER OF THE BORDERS */
 input{
-    border: 3px solid var(--green900);
+    border: 3px solid transparent;
     border-radius: 5px;
     background: var(--grey50);
     width: 100%;
@@ -55,7 +55,7 @@ input{
 input:focus{
     border-color: var(--green400);
     outline: none;
-}
+}`
 
 input::placeholder{
     color: var(--grey500);
