@@ -88,31 +88,15 @@ const calculateShares = () => {
     }
 };
 
-const displayError = () => {
-    // Will rewrite, will try to make this a reusable function instead of this:
-    // const totalBill = Number(billContainer.value);
-    // const selectedTip = document.querySelector('.active-tip');
-    // const numberOfPeople = Number(peopleCountContainer.value);
+const displayError = (input) => {
+    const numInput = Number(input.value);
 
-    // if (!isNumber(totalBill) && totalBill !== ""){
-    //     billContainer.classList.add('invalid-input');
-    // } else {
-    //     billContainer.classList.remove('invalid-input');
-    // }
-
-    // if(!isNumber(selectedTip) && tipCustom.value !== ""){
-    //     tipCustom.classList.add('invalid-input');
-    // } else {
-    //     tipCustom.classList.remove('invalid-input');
-    // }
-
-    // if(!isNumber(numberOfPeople) && numberOfPeople !== ""){
-    //     peopleCountContainer.classList.add('invalid-input');
-    // } else {
-    //     peopleCountContainer.classList.remove('invalid-input');
-    // }
-
-    // return console.log("Invalid data types!");
+    if (!isNumber(numInput)){
+        // Change bordercolor
+        input.classList.add("invalid-input");
+    } else {
+        input.classList.remove("invalid-input");
+    }
 };
 
 const displayTipAndBill = (tip, bill) => {
@@ -121,16 +105,18 @@ const displayTipAndBill = (tip, bill) => {
 };
 
 [billContainer, peopleCountContainer].forEach(element => {
-    element.addEventListener('input', () => {
-        displayError();
+    element.addEventListener('input', (e) => {
+        displayError(e.target);
         calculateShares();
+        console.log(`${e.target}: ${e.target.value}, ${typeof e.target.value}`);
     });
 });
 
 // Added an input event listener for the custom tip
-tipCustom.addEventListener('input', () => {
+tipCustom.addEventListener('input', (e) => {
     if (tipCustom.classList.contains('active-tip')){
-        displayError();
+        displayError(e.target);
         calculateShares();
+        console.log(`${e.target}: ${e.target.value}, ${typeof e.target.value}`);
     }
 });
